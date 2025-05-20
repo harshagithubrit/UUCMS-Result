@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Login</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: #042c5c;
+      border-radius: 16px;
+      width: 450px;
+      padding: 20px;
+      margin: 30px auto;
+      color: white;
+      border: 2px solid white;
+    }
+    .tabs {
+      display: flex;
+      background-color: #d8d8d8;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      color: blue;
+      cursor: pointer;
+      font-size: 16px;
+      border-right: 1px solid black;
+    }
+    .tab:last-child {
+      border-right: none;
+    }
+    .tab.active {
+      background-color: #f57c22;
+      color: white;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #00264d;
+      color: white;
+    }
+    .radio-group {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .radio-group input {
+      margin-right: 8px;
+    }
+    .captcha-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .captcha-box {
+      background-color: #e2e2e2;
+      color: black;
+      padding: 10px 20px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .refresh-btn {
+      width: 50px;
+      height: 50px;
+      background-color: #003b88;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+    }
+    .refresh-btn img {
+      width: 30px;
+      height: 30px;
+    }
+    .password-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .password-wrapper input {
+      flex: 1;
+      border-radius: 5px 0 0 5px;
+    }
+    .eye-icon {
+      background-color: #e2e2e2;
+      padding: 12px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    .login-btn {
+      background-color: #0047b3;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px 0 10px 0;
+    }
+    .forgot-password {
+      text-align: right;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .forgot-password span {
+      color: #f57c22;
+      cursor: pointer;
+    }
+    .register-link {
+      color: #f57c22;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div class="tab">State Admin</div>
+      <div class="tab">University</div>
+      <div class="tab">College/PG Center</div>
+      <div class="tab active">Student</div>
+      <div class="tab">KSOU Reg Centre</div>
+    </div>
+
+    <div class="radio-group">
+      <label><input type="radio" name="studentType" checked /> Regular Student</label>
+      <label><input type="radio" name="studentType" /> KSOU Student</label>
+    </div>
+
+    <label>Username</label>
+    <input type="text" placeholder="Enter Username" />
+
+    <label>Password</label>
+    <div class="password-wrapper">
+      <input type="password" placeholder="Enter Password" />
+      <div class="eye-icon">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/visible.png" width="20" height="20" alt="show" />
+      </div>
+    </div>
+
+    <label>Enter Captcha</label>
+    <div class="captcha-group">
+      <div class="captcha-box">78923</div>
+      <div class="refresh-btn">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/recurring-appointment.png" alt="Refresh">
+      </div>
+      <input type="text" placeholder="Enter Captcha" style="flex: 1; background-color: #00264d; color: white; border: 1px solid #ccc; border-radius: 5px; padding: 10px; font-size: 16px;" />
+    </div>
+
+    <div class="forgot-password">
+      Forgot Password? <span>Click Here</span>
+    </div>
+
+    <button class="login-btn"><a href="pdf.html" style="color: white; text-decoration: none;">Log In</a></button>
+
+    <div class="register-link">New Candidate Registration?</div>
+  </div>
+</body>
+</html>
